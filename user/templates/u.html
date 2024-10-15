@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>userdetailes</title>
+    </head>
+    <body>
+        <form method="post">{% csrf_token%}
+            <label>enter the firstname</label>
+            <input type="text" name="fname" required>
+            <input type="submit" value="search">
+
+        </form>
+        {% for i in k%}
+        <table border="2">
+            <tr><th>userid</th><td>{{i.userid}}</td></tr>
+            <tr><th>firstname</th><td>{{i.firstname}}</td></tr>
+            <tr><th>username</th><td>{{i.username}}</td></tr>
+            <tr><th>Gender</th><td>{{i.Gender}}</td></tr>
+            <tr><th>Adharno</th><td>{{i.Adharno}}</td></tr>
+            <tr><th>panno</th><td>{{i.panno}}</td></tr>
+            <tr><th>place</th><td>{{i.place}}</td></tr>
+            <tr><th>contactno</th><td>{{i.contactno}}</td></tr>
+            <tr><th>Emailid</th><td>{{i.Emailid}}</td></tr>
+            <tr><th>photo</th><td><img src="{{i.photo.url}}" width="200" height="200"></td></tr>
+
+
+
+
+
+
+
+
+
+        </table>
+        {% endfor %}
+    </body>
+</html>
